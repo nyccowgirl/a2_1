@@ -1,15 +1,15 @@
 /*
-Trang Hoang
-9/11/20
-Assignment 2.1
+ Trang Hoang
+ 9/11/20
+ Assignment 2.1
 
-This program allows a user to play a simple game of blackjack. The goal is to get as close
-to 21 as possible without going over.
+ This program allows a user to play a simple game of blackjack. The goal is to get as close
+ to 21 as possible without going over.
 
-a2_1.cpp
+ a2_1.cpp
 
-Created by nyccowgirl on 9/11/20.
-Copyright © 2020 nyccowgirl. All rights reserved.
+ Created by nyccowgirl on 9/11/20.
+ Copyright © 2020 nyccowgirl. All rights reserved.
 */
 
 #include <iostream>
@@ -25,8 +25,8 @@ int main(int argc, const char * argv[]) {
     
     int card1, card2, newCard;      // To hold randomly generated cards
     int total;                      // To hold the sum of all the cards
-    char anotherCard;               // To hold y or n input for another card
-    char again;                     // To hold y or n input to play again
+    char anotherCard;               // To hold Y/N or y/n input for another card
+    char again;                     // To hold Y/N or y/n input to play again
     
     do {
         card1 = rand() % 10 + 1;
