@@ -1,14 +1,14 @@
 /*
  Trang Hoang
- 9/11/20
+ 9/13/20
  Assignment 2.1
 
  This program allows a user to play a simple game of blackjack. The goal is to get as close
  to 21 as possible without going over.
 
- a2_1.cpp
+ a2_1amend.cpp
 
- Created by nyccowgirl on 9/11/20.
+ Created by nyccowgirl on 9/13/20.
  Copyright © 2020 nyccowgirl. All rights reserved.
 */
 
@@ -25,7 +25,7 @@ int main(int argc, const char * argv[]) {
     
     int card1, card2, newCard;      // To hold randomly generated cards
     int total;                      // To hold the sum of all the cards
-    char anotherCard;               // To hold Y/N or y/n input for another card
+    char anotherCard = '\0';               // To hold Y/N or y/n input for another card
     char again;                     // To hold Y/N or y/n input to play again
     
     do {
@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
         total = card1 + card2;
         cout << "Total: " << total << endl;
 
-            while (total < blackjack) {
+            while ((total < blackjack) && (anotherCard != 'n' && anotherCard != 'N')) {
                 cout << "Do you want another card? (y/n): ";
                 cin >> anotherCard;
                 
@@ -50,8 +50,6 @@ int main(int argc, const char * argv[]) {
                     cout << "Card: " << newCard << endl;
                     total += newCard;
                     cout << "Total: " << total << endl;
-                } else {
-                    break;
                 }
             }
                 
@@ -63,6 +61,7 @@ int main(int argc, const char * argv[]) {
         
         cout << "Would you like to play again? (y/n): ";
         cin >> again;
+        anotherCard = '\0';
         cout << endl;
     
         while (again != 'y' && again != 'Y' && again != 'n' && again != 'N') {
